@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Path Test</title>
+    <link rel="stylesheet" href="cdn/css/wedding-traditions-combined.css?v=test123">
+    <style>
+        body { padding: 20px; }
+        .test-container { margin: 20px 0; }
+        h2 { margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Testing CSS Avatar Path</h1>
+
+    <div class="test-container">
+        <h2>Review Card with Avatar (using production CSS)</h2>
+        <div class="review-card-modern">
+            <div class="reviewer-avatar" data-reviewer="samantha-pineau"></div>
+            <div class="reviewer-name">Samantha Pineau</div>
+        </div>
+    </div>
+
+    <div class="test-container">
+        <h2>All Avatars</h2>
+        <div style="display: flex; gap: 10px;">
+            <div class="reviewer-avatar" data-reviewer="samantha-pineau"></div>
+            <div class="reviewer-avatar" data-reviewer="mickalena-sheehan"></div>
+            <div class="reviewer-avatar" data-reviewer="elena-mannifield"></div>
+            <div class="reviewer-avatar" data-reviewer="ruby-and-zachary-stepp-daskal"></div>
+            <div class="reviewer-avatar" data-reviewer="chantal-h"></div>
+            <div class="reviewer-avatar" data-reviewer="sasha-wooding"></div>
+            <div class="reviewer-avatar" data-reviewer="myranda-east"></div>
+            <div class="reviewer-avatar" data-reviewer="zachary-daskal"></div>
+            <div class="reviewer-avatar" data-reviewer="rachel-llanas"></div>
+        </div>
+    </div>
+
+    <script>
+        // Check computed styles
+        setTimeout(() => {
+            const avatar = document.querySelector('.reviewer-avatar');
+            const styles = window.getComputedStyle(avatar);
+            console.log('Background image:', styles.backgroundImage);
+            console.log('Background position:', styles.backgroundPosition);
+            console.log('Width:', styles.width);
+            console.log('Height:', styles.height);
+
+            // Add debug info to page
+            const debug = document.createElement('div');
+            debug.innerHTML = `
+                <h3>Debug Info:</h3>
+                <p>Background image: ${styles.backgroundImage}</p>
+                <p>CSS file loaded: ${document.querySelector('link[rel="stylesheet"]').href}</p>
+            `;
+            document.body.appendChild(debug);
+        }, 1000);
+    </script>
+</body>
+</html>

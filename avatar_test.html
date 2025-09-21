@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Avatar Path Test</title>
+    <style>
+        body { padding: 20px; }
+        .test { margin: 20px 0; border: 1px solid #ccc; padding: 20px; }
+
+        /* Test 1: Relative path from CSS location */
+        .avatar-relative {
+            width: 360px;
+            height: 36px;
+            background-image: url('cdn/uploads/img/avatars.jpg');
+            border: 2px solid red;
+        }
+
+        /* Test 2: Absolute path */
+        .avatar-absolute {
+            width: 360px;
+            height: 36px;
+            background-image: url('/everafter.com/wedding-customs/cdn/uploads/img/avatars.jpg');
+            border: 2px solid green;
+        }
+
+        /* Test 3: Individual avatar with sprite */
+        .avatar-sprite {
+            width: 36px;
+            height: 36px;
+            background-image: url('cdn/uploads/img/avatars.jpg');
+            background-size: 360px 36px;
+            background-position: 0 0;
+            border: 2px solid blue;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Avatar Sprite Path Testing</h1>
+
+    <div class="test">
+        <h2>Test 1: Relative Path (from current page)</h2>
+        <div class="avatar-relative"></div>
+    </div>
+
+    <div class="test">
+        <h2>Test 2: Absolute Path</h2>
+        <div class="avatar-absolute"></div>
+    </div>
+
+    <div class="test">
+        <h2>Test 3: Individual Avatars from Sprite</h2>
+        <div class="avatar-sprite" style="background-position: 0 0;"></div>
+        <div class="avatar-sprite" style="background-position: -36px 0;"></div>
+        <div class="avatar-sprite" style="background-position: -72px 0;"></div>
+        <div class="avatar-sprite" style="background-position: -108px 0;"></div>
+        <div class="avatar-sprite" style="background-position: -144px 0;"></div>
+    </div>
+
+    <div class="test">
+        <h2>Direct Image Tag Test</h2>
+        <img src="cdn/uploads/img/avatars.jpg" alt="Avatar sprite" style="border: 1px solid black;">
+    </div>
+</body>
+</html>
