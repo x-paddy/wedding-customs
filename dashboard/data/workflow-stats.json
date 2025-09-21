@@ -1,0 +1,213 @@
+{
+  "last_updated": "2025-09-11T10:23:45.000Z",
+  "pipeline_status": {
+    "overall_status": "Idle",
+    "last_run": "2025-09-11T09:55:00.000Z",
+    "last_run_duration": "3.5 minutes",
+    "success_rate": 97.8,
+    "total_runs_today": 5,
+    "total_runs_week": 34,
+    "total_runs_month": 142
+  },
+  "active_processes": {
+    "build_queue": 0,
+    "running_scripts": 0,
+    "deployment_status": "Complete",
+    "errors_count": 0,
+    "warnings_count": 2,
+    "pending_tasks": 0
+  },
+  "pipeline_stages": {
+    "requirements_validation": {
+      "status": "Complete",
+      "last_run": "2025-09-11T09:55:00.000Z",
+      "duration": "1.2s",
+      "success": true,
+      "checks_passed": 15,
+      "checks_total": 15
+    },
+    "data_collection": {
+      "status": "Complete",
+      "last_run": "2025-09-11T09:55:01.000Z",
+      "duration": "8.4s",
+      "success": true,
+      "articles_processed": 258,
+      "data_sources": 3
+    },
+    "html_generation": {
+      "status": "Complete",
+      "last_run": "2025-09-11T09:55:10.000Z",
+      "duration": "85.3s",
+      "success": true,
+      "files_generated": 258,
+      "templates_used": 12
+    },
+    "media_processing": {
+      "status": "Complete",
+      "last_run": "2025-09-11T09:56:35.000Z",
+      "duration": "42.1s",
+      "success": true,
+      "images_processed": 10486,
+      "audio_files": 6687,
+      "videos_embedded": 1457
+    },
+    "qa_testing": {
+      "status": "Complete",
+      "last_run": "2025-09-11T09:57:17.000Z",
+      "duration": "28.9s",
+      "success": true,
+      "tests_passed": 442,
+      "tests_failed": 0,
+      "lighthouse_avg": 91.2
+    },
+    "deployment": {
+      "status": "Complete",
+      "last_run": "2025-09-11T09:57:46.000Z",
+      "duration": "34.5s",
+      "success": true,
+      "files_deployed": 258,
+      "cdn_assets": 11234,
+      "target": "Production (66.42.83.128)"
+    }
+  },
+  "recent_activity": [
+    {
+      "timestamp": "2025-09-11T09:55:00.000Z",
+      "type": "Full Pipeline",
+      "status": "Success",
+      "duration": "3.5 minutes",
+      "countries": 258,
+      "trigger": "Manual"
+    },
+    {
+      "timestamp": "2025-09-11T08:30:00.000Z",
+      "type": "Single Country",
+      "status": "Success",
+      "duration": "12 seconds",
+      "countries": 1,
+      "trigger": "Italy update"
+    },
+    {
+      "timestamp": "2025-09-11T07:15:00.000Z",
+      "type": "Multi Deploy",
+      "status": "Success",
+      "duration": "5.2 minutes",
+      "countries": 258,
+      "trigger": "Scheduled"
+    },
+    {
+      "timestamp": "2025-09-10T22:00:00.000Z",
+      "type": "Full Pipeline",
+      "status": "Success",
+      "duration": "3.8 minutes",
+      "countries": 258,
+      "trigger": "Scheduled"
+    },
+    {
+      "timestamp": "2025-09-10T18:45:00.000Z",
+      "type": "Media Sync",
+      "status": "Success",
+      "duration": "1.2 minutes",
+      "countries": 0,
+      "trigger": "Manual"
+    },
+    {
+      "timestamp": "2025-09-10T16:30:00.000Z",
+      "type": "Partial Build",
+      "status": "Warning",
+      "duration": "2.1 minutes",
+      "countries": 45,
+      "trigger": "Greece region update"
+    },
+    {
+      "timestamp": "2025-09-10T14:20:00.000Z",
+      "type": "Full Pipeline",
+      "status": "Success",
+      "duration": "3.6 minutes",
+      "countries": 258,
+      "trigger": "Content update"
+    },
+    {
+      "timestamp": "2025-09-10T11:00:00.000Z",
+      "type": "QA Only",
+      "status": "Failed",
+      "duration": "45 seconds",
+      "countries": 0,
+      "trigger": "Test suite update"
+    },
+    {
+      "timestamp": "2025-09-10T09:30:00.000Z",
+      "type": "Full Pipeline",
+      "status": "Success",
+      "duration": "3.4 minutes",
+      "countries": 258,
+      "trigger": "Scheduled"
+    },
+    {
+      "timestamp": "2025-09-10T06:00:00.000Z",
+      "type": "Database Backup",
+      "status": "Success",
+      "duration": "18 seconds",
+      "countries": 0,
+      "trigger": "Scheduled"
+    }
+  ],
+  "performance_metrics": {
+    "average_build_time": {
+      "per_country": "0.85s",
+      "total_pipeline": "3.5 minutes",
+      "trend": "stable"
+    },
+    "resource_usage": {
+      "cpu_average": "45%",
+      "memory_peak": "2.1GB",
+      "disk_io": "Normal"
+    },
+    "optimization_stats": {
+      "html_compression": "73%",
+      "image_optimization": "82%",
+      "cache_hit_rate": "94%"
+    }
+  },
+  "quick_actions": [
+    {
+      "action": "Run Full Pipeline",
+      "command": "python3 _build_pipeline.py",
+      "estimated_time": "3-4 minutes"
+    },
+    {
+      "action": "Run Single Country",
+      "command": "python3 _build_pipeline.py --countries [country]",
+      "estimated_time": "10-15 seconds"
+    },
+    {
+      "action": "View Logs",
+      "command": "tail -f data/logs/pipeline_latest.log",
+      "estimated_time": "Instant"
+    },
+    {
+      "action": "Check Status",
+      "command": "python3 scripts/check_db_status.py",
+      "estimated_time": "2 seconds"
+    },
+    {
+      "action": "Deploy to VPS",
+      "command": "python3 _build_pipeline.py --deploy",
+      "estimated_time": "30-45 seconds"
+    }
+  ],
+  "warnings": [
+    {
+      "timestamp": "2025-09-10T16:30:00.000Z",
+      "type": "Performance",
+      "message": "Greece region build took longer than expected (2.1 minutes)",
+      "severity": "Low"
+    },
+    {
+      "timestamp": "2025-09-10T11:00:00.000Z",
+      "type": "Test Failure",
+      "message": "Lighthouse test suite needs update for new metrics",
+      "severity": "Medium"
+    }
+  ]
+}

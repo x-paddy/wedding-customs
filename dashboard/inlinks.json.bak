@@ -1,0 +1,2387 @@
+{
+  "generated": "2025-09-14T22:57:44.967541",
+  "total_pages": 70,
+  "total_broken_links": 313,
+  "inlinks": {
+    "": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/dashboard.html",
+          "tag": "a",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/css/discover-sections.css?v=qa-test": {
+      "count": 2,
+      "links": [
+        {
+          "from": "cdn/qa-test-page-minified.html",
+          "tag": "link",
+          "text": ""
+        },
+        {
+          "from": "cdn/qa-test-page.html",
+          "tag": "link",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/css/wedding-traditions-combined.css?v=qa-test": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/qa-test-page.html",
+          "tag": "link",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/css/wedding-traditions-combined.min.css?v=qa-test-min": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/qa-test-page-minified.html",
+          "tag": "link",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/docs/accessibility-guidelines.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "accessibility-guidelines.md"
+        }
+      ]
+    },
+    "cdn/docs/asset-versioning-cdn.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "asset-versioning-cdn.md"
+        }
+      ]
+    },
+    "cdn/docs/automated-backup-solutions.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "automated-backup-solutions.md"
+        }
+      ]
+    },
+    "cdn/docs/backup-guide.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "backup-guide.md"
+        }
+      ]
+    },
+    "cdn/docs/backup-recovery-guide.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "backup-recovery-guide.md"
+        }
+      ]
+    },
+    "cdn/docs/build-documentation.md": {
+      "count": 2,
+      "links": [
+        {
+          "from": "cdn/docs/performance-testing-guide.html",
+          "tag": "a",
+          "text": "build-documentation.md"
+        },
+        {
+          "from": "cdn/docs/playwright.html",
+          "tag": "a",
+          "text": "build-documentation.md"
+        }
+      ]
+    },
+    "cdn/docs/build-pipeline.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "build-pipeline.md"
+        }
+      ]
+    },
+    "cdn/docs/build-process-diagram.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "build-process-diagram.md"
+        }
+      ]
+    },
+    "cdn/docs/cdn-sync-complete.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "cdn-sync-complete.md"
+        }
+      ]
+    },
+    "cdn/docs/cdn/img/everafter-logo.png": {
+      "count": 54,
+      "links": [
+        {
+          "from": "cdn/docs/accessibility-guidelines.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/active-field-management.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/anthropic.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/asset-versioning-cdn.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/automated-backup-solutions.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/backup-recovery-guide.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/backup-status.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/build-markup-improvements.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/build-pipeline.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/build-process-diagram.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/cdn-sync-complete.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/cloud-backup-setup.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/comprehensive-test-report.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/content-loading.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/dalle.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/dashboard-inlinks-system.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/dashboard.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/database-migrations.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/deployment-guide.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/deployment-instructions.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/deployment-summary-20250818.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/documentation-cleanup-summary.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/elevenlabs.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/final-deployment-status.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/footer-interlinking-system.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/git-workflow-summary.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/git.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/github-sync-setup.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/github-sync-summary.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/github-upload-instructions.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/github-upload-status.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/image-acceptance-workflow-explained.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/image-approval-workflow.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/index.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/lighthouse-complete-data-storage.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/lighthouse.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/media-embedding-system.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/minification-deployment.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/performance-optimization-report.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/performance-testing-guide.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/playwright.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/pre-build-checklist.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/production-upload-checklist.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/promoting-on-social.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/semantic-html-improvements-complete.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/ship-ready-checklist.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/ssh-authentication.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/system-status-report.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/testing-guide.html",
+          "tag": "img",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/todo.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/docs/cloud-backup-setup.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "cloud-backup-setup.md"
+        }
+      ]
+    },
+    "cdn/docs/comprehensive-test-report.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "comprehensive-test-report.md"
+        }
+      ]
+    },
+    "cdn/docs/content-loading.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "content-loading.md"
+        }
+      ]
+    },
+    "cdn/docs/dalle.md": {
+      "count": 2,
+      "links": [
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "dalle.md"
+        },
+        {
+          "from": "cdn/docs/image-approval-workflow.html",
+          "tag": "a",
+          "text": "claude/dalle.md"
+        }
+      ]
+    },
+    "cdn/docs/dashboard.html": {
+      "count": 52,
+      "links": [
+        {
+          "from": "cdn/docs/accessibility-guidelines.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/active-field-management.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/anthropic.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/asset-versioning-cdn.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/automated-backup-solutions.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/backup-recovery-guide.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/backup-status.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/build-markup-improvements.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/build-pipeline.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/build-process-diagram.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/cdn-sync-complete.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/cloud-backup-setup.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/comprehensive-test-report.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/content-loading.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/dalle.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/dashboard-inlinks-system.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/database-migrations.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/deployment-guide.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/deployment-instructions.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/deployment-summary-20250818.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/documentation-cleanup-summary.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/elevenlabs.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/final-deployment-status.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/footer-interlinking-system.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/git-workflow-summary.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/git.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/github-sync-setup.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/github-sync-summary.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/github-upload-instructions.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/github-upload-status.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/image-acceptance-workflow-explained.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/image-approval-workflow.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/lighthouse-complete-data-storage.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/lighthouse.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/media-embedding-system.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/minification-deployment.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/performance-optimization-report.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/performance-testing-guide.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/playwright.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/pre-build-checklist.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/production-upload-checklist.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/promoting-on-social.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/semantic-html-improvements-complete.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/ship-ready-checklist.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/ssh-authentication.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/system-status-report.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/testing-guide.html",
+          "tag": "a",
+          "text": "Dashboard"
+        },
+        {
+          "from": "cdn/docs/todo.html",
+          "tag": "a",
+          "text": "Dashboard"
+        }
+      ]
+    },
+    "cdn/docs/deployment-documentation.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "deployment-documentation.md"
+        }
+      ]
+    },
+    "cdn/docs/deployment-guide.md": {
+      "count": 3,
+      "links": [
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "deployment-guide.md"
+        },
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "deployment-guide.md"
+        },
+        {
+          "from": "cdn/docs/performance-testing-guide.html",
+          "tag": "a",
+          "text": "deployment-guide.md"
+        }
+      ]
+    },
+    "cdn/docs/deployment-instructions.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "deployment-instructions.md"
+        }
+      ]
+    },
+    "cdn/docs/deployment-summary-20250818.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "deployment-summary-20250818.md"
+        }
+      ]
+    },
+    "cdn/docs/final-deployment-status.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "final-deployment-status.md"
+        }
+      ]
+    },
+    "cdn/docs/footer-interlinking-system.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "footer-interlinking-system.md"
+        }
+      ]
+    },
+    "cdn/docs/git.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "git.md"
+        }
+      ]
+    },
+    "cdn/docs/github-sync-setup.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "github-sync-setup.md"
+        }
+      ]
+    },
+    "cdn/docs/github-sync-summary.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "github-sync-summary.md"
+        }
+      ]
+    },
+    "cdn/docs/github-upload-instructions.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "github-upload-instructions.md"
+        }
+      ]
+    },
+    "cdn/docs/github-upload-status.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "github-upload-status.md"
+        }
+      ]
+    },
+    "cdn/docs/image-acceptance-workflow-explained.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "image-acceptance-workflow-explained.md"
+        }
+      ]
+    },
+    "cdn/docs/performance-optimization-report.md": {
+      "count": 2,
+      "links": [
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "performance-optimization-report.md"
+        },
+        {
+          "from": "cdn/docs/performance-testing-guide.html",
+          "tag": "a",
+          "text": "performance-optimization-report.md"
+        }
+      ]
+    },
+    "cdn/docs/performance-testing-guide.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "performance-testing-guide.md"
+        }
+      ]
+    },
+    "cdn/docs/playwright.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "playwright.md"
+        }
+      ]
+    },
+    "cdn/docs/pre-build-checklist.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "pre-build-checklist.md"
+        }
+      ]
+    },
+    "cdn/docs/production-upload-checklist.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "production-upload-checklist.md"
+        }
+      ]
+    },
+    "cdn/docs/promoting-on-social.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "promoting-on-social.md"
+        }
+      ]
+    },
+    "cdn/docs/ship-ready-checklist.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "ship-ready-checklist.md"
+        }
+      ]
+    },
+    "cdn/docs/system-status-report.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "system-status-report.md"
+        }
+      ]
+    },
+    "cdn/docs/testing-guide.md": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "testing-guide.md"
+        }
+      ]
+    },
+    "cdn/img/demos/egypt_frame_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/egypt_polaroid_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/egypt_print_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/greece_frame_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/greece_polaroid_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/greece_print_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/india_frame_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/india_polaroid_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/india_print_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/italy_frame_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/italy_polaroid_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/italy_print_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/japan_frame_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/japan_polaroid_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/japan_print_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/mexico_frame_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/mexico_polaroid_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/img/demos/mexico_print_demo.png": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/img/demos/demo_gallery.html",
+          "tag": "img",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/js/wedding-traditions-combined.js?v=qa-test": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/qa-test-page.html",
+          "tag": "script",
+          "text": ""
+        }
+      ]
+    },
+    "cdn/js/wedding-traditions-combined.min.js?v=qa-test-min": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/qa-test-page-minified.html",
+          "tag": "script",
+          "text": ""
+        }
+      ]
+    },
+    "dashboard/api.html": {
+      "count": 6,
+      "links": [
+        {
+          "from": "dashboard/api-backup.html",
+          "tag": "a",
+          "text": "Lighthouse API"
+        },
+        {
+          "from": "dashboard/api.html",
+          "tag": "a",
+          "text": "Lighthouse API"
+        },
+        {
+          "from": "dashboard/index-backup.html",
+          "tag": "a",
+          "text": "Lighthouse API"
+        },
+        {
+          "from": "dashboard/index.html",
+          "tag": "a",
+          "text": "Lighthouse API"
+        },
+        {
+          "from": "dashboard/inlinks-backup.html",
+          "tag": "a",
+          "text": "Lighthouse API"
+        },
+        {
+          "from": "dashboard/inlinks.html",
+          "tag": "a",
+          "text": "Lighthouse API"
+        }
+      ]
+    },
+    "dashboard/css/dashboard-unified.css": {
+      "count": 4,
+      "links": [
+        {
+          "from": "dashboard/api.html",
+          "tag": "link",
+          "text": ""
+        },
+        {
+          "from": "dashboard/index-backup.html",
+          "tag": "link",
+          "text": ""
+        },
+        {
+          "from": "dashboard/index.html",
+          "tag": "link",
+          "text": ""
+        },
+        {
+          "from": "dashboard/inlinks.html",
+          "tag": "link",
+          "text": ""
+        }
+      ]
+    },
+    "dashboard/index.html": {
+      "count": 6,
+      "links": [
+        {
+          "from": "dashboard/api-backup.html",
+          "tag": "a",
+          "text": "Content"
+        },
+        {
+          "from": "dashboard/api.html",
+          "tag": "a",
+          "text": "Content"
+        },
+        {
+          "from": "dashboard/index-backup.html",
+          "tag": "a",
+          "text": "Content"
+        },
+        {
+          "from": "dashboard/index.html",
+          "tag": "a",
+          "text": "Content"
+        },
+        {
+          "from": "dashboard/inlinks-backup.html",
+          "tag": "a",
+          "text": "Content"
+        },
+        {
+          "from": "dashboard/inlinks.html",
+          "tag": "a",
+          "text": "Content"
+        }
+      ]
+    },
+    "dashboard/inlinks.html": {
+      "count": 6,
+      "links": [
+        {
+          "from": "dashboard/api-backup.html",
+          "tag": "a",
+          "text": "Inlinks"
+        },
+        {
+          "from": "dashboard/api.html",
+          "tag": "a",
+          "text": "Inlinks"
+        },
+        {
+          "from": "dashboard/index-backup.html",
+          "tag": "a",
+          "text": "Inlinks"
+        },
+        {
+          "from": "dashboard/index.html",
+          "tag": "a",
+          "text": "Inlinks"
+        },
+        {
+          "from": "dashboard/inlinks-backup.html",
+          "tag": "a",
+          "text": "Inlinks"
+        },
+        {
+          "from": "dashboard/inlinks.html",
+          "tag": "a",
+          "text": "Inlinks"
+        }
+      ]
+    },
+    "italian-wedding-traditions.html": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/footer-interlinking-system.html",
+          "tag": "a",
+          "text": "Italian Wedding Customs"
+        }
+      ]
+    },
+    "wedding-customs/": {
+      "count": 105,
+      "links": [
+        {
+          "from": "cdn/docs/accessibility-guidelines.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/accessibility-guidelines.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/active-field-management.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/active-field-management.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/anthropic.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/anthropic.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/asset-versioning-cdn.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/asset-versioning-cdn.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/automated-backup-solutions.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/automated-backup-solutions.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/backup-recovery-guide.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/backup-recovery-guide.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/backup-status.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/backup-status.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/build-markup-improvements.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/build-markup-improvements.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/build-pipeline.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/build-pipeline.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/build-process-diagram.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/build-process-diagram.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/cdn-sync-complete.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/cdn-sync-complete.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/cloud-backup-setup.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/cloud-backup-setup.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/comprehensive-test-report.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/comprehensive-test-report.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/content-loading.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/content-loading.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/dalle.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/dalle.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/dashboard-inlinks-system.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/dashboard-inlinks-system.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/database-migrations.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/database-migrations.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/deployment-guide.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/deployment-guide.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/deployment-instructions.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/deployment-instructions.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/deployment-summary-20250818.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/deployment-summary-20250818.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/documentation-cleanup-summary.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/documentation-cleanup-summary.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/elevenlabs.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/elevenlabs.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/final-deployment-status.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/final-deployment-status.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/footer-interlinking-system.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/footer-interlinking-system.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/git-workflow-summary.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/git-workflow-summary.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/git.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/git.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/github-sync-setup.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/github-sync-setup.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/github-sync-summary.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/github-sync-summary.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/github-upload-instructions.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/github-upload-instructions.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/github-upload-status.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/github-upload-status.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/image-acceptance-workflow-explained.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/image-acceptance-workflow-explained.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/image-approval-workflow.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/image-approval-workflow.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/index.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/lighthouse-complete-data-storage.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/lighthouse-complete-data-storage.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/lighthouse.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/lighthouse.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/media-embedding-system.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/media-embedding-system.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/minification-deployment.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/minification-deployment.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/performance-optimization-report.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/performance-optimization-report.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/performance-testing-guide.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/performance-testing-guide.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/playwright.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/playwright.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/pre-build-checklist.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/pre-build-checklist.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/production-upload-checklist.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/production-upload-checklist.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/promoting-on-social.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/promoting-on-social.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/semantic-html-improvements-complete.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/semantic-html-improvements-complete.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/ship-ready-checklist.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/ship-ready-checklist.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/ssh-authentication.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/ssh-authentication.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/system-status-report.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/system-status-report.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/testing-guide.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/testing-guide.html",
+          "tag": "a",
+          "text": "Home"
+        },
+        {
+          "from": "cdn/docs/todo.html",
+          "tag": "a",
+          "text": ""
+        },
+        {
+          "from": "cdn/docs/todo.html",
+          "tag": "a",
+          "text": "Home"
+        }
+      ]
+    },
+    "wedding-customs/cdn/css/wedding-traditions.css?v=1757548887": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/minification-deployment.html",
+          "tag": "link",
+          "text": ""
+        }
+      ]
+    },
+    "wedding-customs/cdn/docs/": {
+      "count": 105,
+      "links": [
+        {
+          "from": "cdn/docs/accessibility-guidelines.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/accessibility-guidelines.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/active-field-management.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/active-field-management.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/anthropic.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/anthropic.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/asset-versioning-cdn.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/asset-versioning-cdn.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/automated-backup-solutions.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/automated-backup-solutions.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/backup-guide.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/backup-recovery-guide.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/backup-recovery-guide.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/backup-status.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/backup-status.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/build-documentation.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/build-markup-improvements.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/build-markup-improvements.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/build-pipeline.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/build-pipeline.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/build-process-diagram.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/build-process-diagram.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/cdn-sync-complete.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/cdn-sync-complete.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/cloud-backup-setup.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/cloud-backup-setup.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/comprehensive-test-report.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/comprehensive-test-report.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/content-loading.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/content-loading.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/dalle.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/dalle.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/dashboard-inlinks-system.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/dashboard-inlinks-system.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/database-migrations.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/database-migrations.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/deployment-documentation.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/deployment-guide.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/deployment-guide.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/deployment-instructions.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/deployment-instructions.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/deployment-summary-20250818.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/deployment-summary-20250818.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/documentation-cleanup-summary.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/documentation-cleanup-summary.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/elevenlabs.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/elevenlabs.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/final-deployment-status.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/final-deployment-status.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/footer-interlinking-system.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/footer-interlinking-system.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/git-workflow-summary.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/git-workflow-summary.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/git.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/git.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/github-sync-setup.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/github-sync-setup.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/github-sync-summary.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/github-sync-summary.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/github-upload-instructions.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/github-upload-instructions.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/github-upload-status.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/github-upload-status.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/image-acceptance-workflow-explained.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/image-acceptance-workflow-explained.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/image-approval-workflow.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/image-approval-workflow.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/index.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/lighthouse-complete-data-storage.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/lighthouse-complete-data-storage.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/lighthouse.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/lighthouse.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/media-embedding-system.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/media-embedding-system.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/minification-deployment.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/minification-deployment.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/performance-optimization-report.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/performance-optimization-report.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/performance-testing-guide.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/performance-testing-guide.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/playwright.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/playwright.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/pre-build-checklist.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/pre-build-checklist.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/production-upload-checklist.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/production-upload-checklist.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/promoting-on-social.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/promoting-on-social.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/semantic-html-improvements-complete.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/semantic-html-improvements-complete.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/ship-ready-checklist.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/ship-ready-checklist.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/ssh-authentication.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/ssh-authentication.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/system-status-report.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/system-status-report.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/testing-documentation.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/testing-guide.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/testing-guide.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/todo.html",
+          "tag": "a",
+          "text": "Documentation"
+        },
+        {
+          "from": "cdn/docs/todo.html",
+          "tag": "a",
+          "text": "Documentation"
+        }
+      ]
+    },
+    "wedding-customs/cdn/js/wedding-traditions.js?v=1757548887": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/minification-deployment.html",
+          "tag": "script",
+          "text": ""
+        }
+      ]
+    },
+    "wedding-customs/dashboard.html": {
+      "count": 1,
+      "links": [
+        {
+          "from": "cdn/docs/index.html",
+          "tag": "a",
+          "text": "Dashboard"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .score-good { color: #28a745; font-weight: 600; }
+        .score-needs-work { color: #ffc107; font-weight: 600; }
+        .score-poor { color: #dc3545; font-weight: 600; }
+    </style>
+</head>
+<body>
+    <h1>Color Test</h1>
+    <p>Normal text</p>
+    <p class="score-good">This should be GREEN (score-good)</p>
+    <p class="score-needs-work">This should be ORANGE (score-needs-work)</p>
+    <p class="score-poor">This should be RED (score-poor)</p>
+    
+    <table border="1">
+        <tr>
+            <td>Normal</td>
+            <td class="score-good">95</td>
+            <td class="score-needs-work">75</td>
+            <td class="score-poor">45</td>
+        </tr>
+    </table>
+    
+    <script>
+        function getScoreClass(score) {
+            const numScore = typeof score === 'string' && score !== '-' ? parseFloat(score) : score;
+            if (!numScore || numScore === '-' || isNaN(numScore)) return '';
+            if (numScore >= 90) return 'score-good';
+            if (numScore >= 50) return 'score-needs-work';
+            return 'score-poor';
+        }
+        
+        console.log('Test getScoreClass:');
+        console.log('95 =>', getScoreClass(95));
+        console.log('75 =>', getScoreClass(75));
+        console.log('45 =>', getScoreClass(45));
+        console.log('"-" =>', getScoreClass('-'));
+    </script>
+</body>
+</html>

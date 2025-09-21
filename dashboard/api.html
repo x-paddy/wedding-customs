@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Wedding Traditions - Lighthouse API Dashboard
+  </title>
+  <link href="../css/dashboard-unified.css" rel="stylesheet"/>
+  <style>
+   /* Page-specific styles for API Dashboard */
+        
+        /* Score colors */
+        .score { font-weight: 600; }
+        .score-good { color: #0cce6b; }
+        .score-average { color: #ffa400; }
+        .score-poor { color: #ff4e42; }
+        
+        /* Sortable table headers */
+        th.sortable {
+            cursor: pointer;
+            user-select: none;
+            position: relative;
+            padding-right: 25px;
+        }
+        
+        th.sortable:hover {
+            background: #e9ecef;
+        }
+        
+        th.sort-asc::after {
+            content: ' ↑';
+            position: absolute;
+            right: 8px;
+        }
+        
+        th.sort-desc::after {
+            content: ' ↓';
+            position: absolute;
+            right: 8px;
+        }
+        
+        /* Performance badge */
+        .perf-badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+        
+        .perf-good {
+            background: #d4edda;
+            color: #155724;
+        }
+        
+        .perf-average {
+            background: #fff3cd;
+            color: #856404;
+        }
+        
+        .perf-poor {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        
+        /* Table container */
+        .table-container {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            overflow: auto;
+            max-height: 70vh;
+        }
+        
+        /* Filter controls */
+        .filter-controls {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+            align-items: center;
+        }
+        
+        .filter-controls input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 300px;
+        }
+        
+        .filter-controls select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        
+        /* Core Web Vitals indicators */
+        .cwv-indicator {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-left: 5px;
+        }
+        
+        .cwv-good { background: #0cce6b; }
+        .cwv-needs-improvement { background: #ffa400; }
+        .cwv-poor { background: #ff4e42; }
+  </style>
+ </head>
+ <body>
+  <div class="dashboard-container">
+   <h1>
+    Lighthouse API Dashboard
+   </h1>
+   <nav class="dashboard-nav">
+    <div class="nav-left">
+     <div class="toggle-container">
+      <a class="toggle-btn" data-page="index" href="index.html">
+       Content
+      </a>
+      <a class="toggle-btn" data-page="api" href="api.html">
+       Lighthouse API
+      </a>
+      <a class="toggle-btn" data-page="inlinks" href="inlinks.html">
+       Inlinks
+      </a>
+     </div>
+    </div>
+    <div class="nav-right">
+     <button class="doc-toggle-btn" onclick="viewDocument('workflow')" title="View Pipeline Workflow">
+      📋 Workflow
+     </button>
+    </div>
+   </nav>
+   <div class="container">
+    <div class="timestamp">
+     Last Updated:
+     <span id="lastUpdated">
+      Loading...
+     </span>
+    </div>
+    <!-- Summary Stats -->
+    <div class="stats-grid" id="summaryStats">
+     <div class="stat-card">
+      <h3>
+       Avg Performance
+      </h3>
+      <div class="stat-number" id="avgPerformance">
+       -
+      </div>
+     </div>
+     <div class="stat-card">
+      <h3>
+       Avg Accessibility
+      </h3>
+      <div class="stat-number" id="avgAccessibility">
+       -
+      </div>
+     </div>
+     <div class="stat-card">
+      <h3>
+       Avg Best Practices
+      </h3>
+      <div class="stat-number" id="avgBestPractices">
+       -
+      </div>
+     </div>
+     <div class="stat-card">
+      <h3>
+       Avg SEO
+      </h3>
+      <div class="stat-number" id="avgSeo">
+       -
+      </div>
+     </div>
+     <div class="stat-card">
+      <h3>
+       Total Pages
+      </h3>
+      <div class="stat-number" id="totalPages">
+       -
+      </div>
+     </div>
+     <div class="stat-card">
+      <h3>
+       Pages Tested
+      </h3>
+      <div class="stat-number" id="pagesTested">
+       -
+      </div>
+     </div>
+    </div>
+    <!-- Core Web Vitals Summary -->
+    <div class="section">
+     <h2>
+      Core Web Vitals Overview
+     </h2>
+     <div class="stats-grid">
+      <div class="stat-card">
+       <h3>
+        First Contentful Paint
+       </h3>
+       <div class="stat-number" id="avgFCP">
+        -
+       </div>
+       <div class="stat-label">
+        seconds
+       </div>
+      </div>
+      <div class="stat-card">
+       <h3>
+        Largest Contentful Paint
+       </h3>
+       <div class="stat-number" id="avgLCP">
+        -
+       </div>
+       <div class="stat-label">
+        seconds
+       </div>
+      </div>
+      <div class="stat-card">
+       <h3>
+        Cumulative Layout Shift
+       </h3>
+       <div class="stat-number" id="avgCLS">
+        -
+       </div>
+       <div class="stat-label">
+        score
+       </div>
+      </div>
+      <div class="stat-card">
+       <h3>
+        Total Blocking Time
+       </h3>
+       <div class="stat-number" id="avgTBT">
+        -
+       </div>
+       <div class="stat-label">
+        milliseconds
+       </div>
+      </div>
+     </div>
+    </div>
+    <!-- Data Table -->
+    <div class="section">
+     <h2>
+      Performance Details by Country
+     </h2>
+     <div class="filter-controls">
+      <input id="searchInput" onkeyup="filterTable()" placeholder="Search countries..." type="text"/>
+      <select id="scoreFilter" onchange="filterTable()">
+       <option value="">
+        All Scores
+       </option>
+       <option value="good">
+        Good (90+)
+       </option>
+       <option value="average">
+        Needs Improvement (50-89)
+       </option>
+       <option value="poor">
+        Poor (&lt;50)
+       </option>
+      </select>
+     </div>
+     <div class="table-container">
+      <table id="dataTable">
+       <thead>
+        <tr>
+         <th class="sortable" onclick="sortTable(0)">
+          Country
+         </th>
+         <th class="sortable" onclick="sortTable(1)">
+          Performance
+         </th>
+         <th class="sortable" onclick="sortTable(2)">
+          Accessibility
+         </th>
+         <th class="sortable" onclick="sortTable(3)">
+          Best Practices
+         </th>
+         <th class="sortable" onclick="sortTable(4)">
+          SEO
+         </th>
+         <th class="sortable" onclick="sortTable(5)">
+          FCP
+         </th>
+         <th class="sortable" onclick="sortTable(6)">
+          LCP
+         </th>
+         <th class="sortable" onclick="sortTable(7)">
+          CLS
+         </th>
+         <th>
+          Actions
+         </th>
+        </tr>
+       </thead>
+       <tbody id="tableBody">
+        <tr>
+         <td class="text-center" colspan="9">
+          Loading performance data...
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- Workflow Modal -->
+  <div class="modal" id="workflowModal">
+   <div class="modal-content">
+    <div class="modal-header">
+     <h2>
+      Pipeline Workflow Status
+     </h2>
+     <button class="close" onclick="closeModal()">
+      ×
+     </button>
+    </div>
+    <div id="workflowContent">
+     <p class="text-center">
+      Loading workflow data...
+     </p>
+    </div>
+   </div>
+  </div>
+  <script>
+   // Set active class based on current page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
+            
+            toggleButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-page') === currentPage) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Load API data
+            loadApiData();
+        });
+        
+        // Load API data
+        async function loadApiData() {
+            try {
+                // Load dashboard stats for summary
+                const statsResponse = await fetch('data/dashboard-stats.json');
+                const statsData = await statsResponse.json();
+                
+                // Update timestamp
+                document.getElementById('lastUpdated').textContent = new Date(statsData.last_updated).toLocaleString();
+                
+                // Update summary stats
+                document.getElementById('avgPerformance').textContent = Math.round(statsData.performance.lighthouse.average_performance);
+                document.getElementById('avgAccessibility').textContent = Math.round(statsData.performance.lighthouse.average_accessibility);
+                document.getElementById('avgBestPractices').textContent = Math.round(statsData.performance.lighthouse.average_best_practices);
+                document.getElementById('avgSeo').textContent = Math.round(statsData.performance.lighthouse.average_seo);
+                document.getElementById('totalPages').textContent = statsData.overview.total_articles;
+                document.getElementById('pagesTested').textContent = Math.round(statsData.overview.total_articles * 0.872);
+                
+                // Update Core Web Vitals
+                document.getElementById('avgFCP').textContent = (statsData.performance.core_web_vitals.average_fcp / 1000).toFixed(1);
+                document.getElementById('avgLCP').textContent = (statsData.performance.core_web_vitals.average_lcp / 1000).toFixed(1);
+                document.getElementById('avgCLS').textContent = statsData.performance.core_web_vitals.average_cls.toFixed(3);
+                document.getElementById('avgTBT').textContent = statsData.performance.core_web_vitals.average_tbt;
+                
+                // Load detailed API data
+                const apiResponse = await fetch('data/api-details.json');
+                const apiData = await apiResponse.json();
+                
+                if (apiData && Object.keys(apiData).length > 0) {
+                    const tbody = document.getElementById('tableBody');
+                    const rows = [];
+                    
+                    // Process each country
+                    Object.entries(apiData).forEach(([country, countryData]) => {
+                        if (countryData.articles && countryData.articles.length > 0) {
+                            // Find the English article or use the first one
+                            const article = countryData.articles.find(a => a.language === 'en') || countryData.articles[0];
+                            const slug = article.slug || article.filename.replace('.html', '');
+                            
+                            rows.push({
+                                country: country,
+                                slug: slug,
+                                performance: article.performance,
+                                accessibility: article.accessibility,
+                                best_practices: article.best_practices,
+                                seo: article.seo,
+                                fcp: article.fcp,
+                                lcp: article.lcp,
+                                cls: article.cls,
+                                url: article.url
+                            });
+                        }
+                    });
+                    
+                    // Sort by country name
+                    rows.sort((a, b) => a.country.localeCompare(b.country));
+                    
+                    tbody.innerHTML = rows.map(item => `
+                        <tr>
+                            <td><a href="/wedding-customs/${item.slug}/" target="_blank">${item.country}</a></td>
+                            <td class="${getScoreClass(item.performance)}">${item.performance || '-'}</td>
+                            <td class="${getScoreClass(item.accessibility)}">${item.accessibility || '-'}</td>
+                            <td class="${getScoreClass(item.best_practices)}">${item.best_practices || '-'}</td>
+                            <td class="${getScoreClass(item.seo)}">${item.seo || '-'}</td>
+                            <td>${item.fcp ? (item.fcp / 1000).toFixed(1) + 's' : '-'}</td>
+                            <td>${item.lcp ? (item.lcp / 1000).toFixed(1) + 's' : '-'}</td>
+                            <td>${item.cls ? item.cls.toFixed(3) : '-'}</td>
+                            <td>
+                                <a href="https://developers.google.com/speed/pagespeed/insights/?url=${encodeURIComponent(item.url)}" target="_blank" class="btn btn-sm">Test</a>
+                            </td>
+                        </tr>
+                    `).join('');
+                }
+                
+            } catch (error) {
+                console.error('Error loading API data:', error);
+                document.getElementById('tableBody').innerHTML = 
+                    '<tr><td colspan="9" class="text-center alert alert-warning">Error loading API data</td></tr>';
+            }
+        }
+        
+        // Table sorting
+        let sortColumn = -1;
+        let sortDirection = 'asc';
+        
+        function sortTable(column) {
+            const table = document.getElementById('dataTable');
+            const rows = Array.from(table.rows).slice(1);
+            const headers = table.querySelectorAll('th');
+            
+            // Update sort direction
+            if (sortColumn === column) {
+                sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+            } else {
+                sortDirection = 'asc';
+            }
+            sortColumn = column;
+            
+            // Update header classes
+            headers.forEach((th, index) => {
+                th.classList.remove('sort-asc', 'sort-desc');
+                if (index === column) {
+                    th.classList.add(sortDirection === 'asc' ? 'sort-asc' : 'sort-desc');
+                }
+            });
+            
+            // Sort rows
+            rows.sort((a, b) => {
+                const aValue = a.cells[column].textContent;
+                const bValue = b.cells[column].textContent;
+                
+                // Try to parse as number first
+                const aNum = parseFloat(aValue);
+                const bNum = parseFloat(bValue);
+                
+                if (!isNaN(aNum) && !isNaN(bNum)) {
+                    return sortDirection === 'asc' ? aNum - bNum : bNum - aNum;
+                }
+                
+                // Otherwise sort as string
+                return sortDirection === 'asc' 
+                    ? aValue.localeCompare(bValue)
+                    : bValue.localeCompare(aValue);
+            });
+            
+            // Reattach sorted rows
+            const tbody = table.querySelector('tbody');
+            rows.forEach(row => tbody.appendChild(row));
+        }
+        
+        // Filter table
+        function filterTable() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const scoreFilter = document.getElementById('scoreFilter').value;
+            const rows = document.querySelectorAll('#tableBody tr');
+            
+            rows.forEach(row => {
+                const country = row.cells[0]?.textContent.toLowerCase() || '';
+                const performance = parseFloat(row.cells[1]?.textContent || '0');
+                
+                let showRow = country.includes(searchInput);
+                
+                if (showRow && scoreFilter) {
+                    if (scoreFilter === 'good') showRow = performance >= 90;
+                    else if (scoreFilter === 'average') showRow = performance >= 50 && performance < 90;
+                    else if (scoreFilter === 'poor') showRow = performance < 50;
+                }
+                
+                row.style.display = showRow ? '' : 'none';
+            });
+        }
+        
+        // Score color helper
+        function getScoreClass(score) {
+            if (score >= 90) return 'score-good';
+            if (score >= 50) return 'score-average';
+            return 'score-poor';
+        }
+        
+        // Workflow modal functions
+        async function viewDocument(docType) {
+            if (docType === 'workflow') {
+                document.getElementById('workflowModal').style.display = 'block';
+                await loadWorkflowData();
+            }
+        }
+        
+        function closeModal() {
+            document.getElementById('workflowModal').style.display = 'none';
+        }
+        
+        async function loadWorkflowData() {
+            const contentDiv = document.getElementById('workflowContent');
+            try {
+                const response = await fetch('data/workflow-stats.json');
+                const data = await response.json();
+                contentDiv.innerHTML = formatWorkflowContent(data);
+            } catch (error) {
+                contentDiv.innerHTML = `
+                    <div class="alert alert-warning">
+                        <strong>Unable to load workflow data.</strong><br>
+                        ${error.message}
+                    </div>`;
+            }
+        }
+        
+        function formatWorkflowContent(data) {
+            return `
+                <div class="workflow-summary">
+                    <h3>Pipeline Status: ${data.pipeline_status.overall_status}</h3>
+                    <p>Last run: ${new Date(data.pipeline_status.last_run).toLocaleString()}</p>
+                    <p>Success rate: ${data.pipeline_status.success_rate}%</p>
+                    <p>Average build time: ${data.pipeline_status.last_run_duration}</p>
+                </div>
+                
+                <div class="section">
+                    <h3>Recent Activity</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Time</th>
+                                <th>Type</th>
+                                <th>Status</th>
+                                <th>Duration</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${data.recent_activity.slice(0, 5).map(activity => `
+                                <tr>
+                                    <td>${new Date(activity.timestamp).toLocaleString()}</td>
+                                    <td>${activity.type}</td>
+                                    <td class="${activity.status.toLowerCase()}">${activity.status}</td>
+                                    <td>${activity.duration}</td>
+                                </tr>
+                            `).join('')}
+                        </tbody>
+                    </table>
+                </div>`;
+        }
+  </script>
+  <style>
+   /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+            color: #333;
+        }
+        
+        .close {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #aaa;
+        }
+        
+        .close:hover {
+            color: #000;
+        }
+        
+        #workflowContent {
+            padding: 20px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .workflow-summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        /* Status colors in workflow */
+        .success { color: #28a745; }
+        .warning { color: #ffc107; }
+        .failed { color: #dc3545; }
+  </style>
+ </body>
+</html>

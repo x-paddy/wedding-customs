@@ -1,0 +1,15 @@
+{
+  "total_countries": 244,
+  "total_articles": 258,
+  "generated_at": "2025-09-09T15:11:48.604811",
+  "avg_performance": 84.72,
+  "avg_accessibility": 94.49,
+  "avg_best_practices": 93.94,
+  "avg_seo": 97.58,
+  "avg_pwa": 58,
+  "score_categories": {
+    "good": 198,
+    "needs_work": 22,
+    "poor": 5
+  }
+}

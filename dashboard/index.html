@@ -1,730 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noodp, noimageindex">
-    <meta name="googlebot" content="noindex, nofollow">
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <title>
-   Wedding Traditions Dashboard - Build Statistics
+   Wedding Traditions - Content Dashboard
   </title>
-  <meta content="Build statistics for wedding traditions from 244 countries with 1026 images and 5158 audio pronunciations." name="description"/>
-  <meta content="website" property="og:type"/>
-  <meta content="Wedding Traditions Dashboard" property="og:title"/>
-  <meta content="Build statistics for wedding traditions from 244 countries." property="og:description"/>
-  <meta content="Wedding Traditions Guide" property="og:site_name"/>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="../css/dashboard-unified.css" rel="stylesheet"/>
   <style>
-   * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+   /* Page-specific styles for Content Dashboard */
         
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            font-size: 16px;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
-        }
-        
-        .simple-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            background: #fff;
-            border-bottom: 1px solid #ddd;
-            height: 60px;
-            display: flex;
-            align-items: center;
-            padding: 0 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            width: 100%;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .nav-logo {
-            height: 40px;
-        }
-        
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        
-        .nav-links a {
-            color: #0d47a1;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-links a:hover {
-            color: #1976d2;
-        }
-        
-        .dashboard-container {
-            max-width: 1400px;
-            margin: 80px auto 40px;
-            padding: 0 20px;
-        }
-        
-        h1 {
-            font-size: 2.5em;
-            color: #1a1a1a;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-        
-        .subtitle {
-            text-align: center;
-            color: #666;
-            font-size: 1.1em;
+        /* Tab Container */
+        .tab-container {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
             margin-bottom: 30px;
-        }
-        
-        /* Gray sitewide stats bar */
-        .stats-summary {
-            background: #6c757d;
-            color: white;
-            padding: 30px;
-            border-radius: 10px;
-            margin-bottom: 40px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-        
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 30px;
-            text-align: center;
-        }
-        
-        .stat-item {
-            padding: 10px;
-        }
-        
-        .stat-value {
-            display: block;
-            font-size: 2.5em;
-            font-weight: bold;
-            margin-bottom: 5px;
-            color: #fff;
-        }
-        
-        .stat-label {
-            display: block;
-            font-size: 0.9em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            opacity: 0.9;
-        }
-        
-        /* Table styles */
-        .table-container {
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
         }
         
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        
-        th {
-            background: #343a40;
-            color: white;
-            padding: 15px 10px;
-            text-align: left;
-            font-weight: 600;
-            position: sticky;
-            top: 60px;
-            z-index: 10;
-            cursor: pointer;
-            user-select: none;
-        }
-        
-        th:hover {
-            background: #495057;
-        }
-        
-        th.sortable::after {
-            content: ' ↕';
-            opacity: 0.5;
-            font-size: 0.8em;
-        }
-        
-        th.sorted-asc::after {
-            content: ' ↑';
-            opacity: 1;
-        }
-        
-        th.sorted-desc::after {
-            content: ' ↓';
-            opacity: 1;
-        }
-        
-        td {
-            padding: 12px 10px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        tr:hover {
-            background-color: #f8f9fa;
-        }
-        
-        .country-name {
-            font-weight: 500;
-        }
-        
-        .country-name a {
-            color: #0d47a1;
-            text-decoration: none;
-        }
-        
-        .country-name a:hover {
-            text-decoration: underline;
-        }
-        
-        .number-cell {
-            text-align: center;
-            font-weight: 500;
-        }
-        
-        .zero {
-            color: #ccc;
-        }
-        
-        .highlight {
-            background-color: #fff3cd;
-        }
-        
-        /* Performance score styles */
-        .perf-score {
-            font-weight: bold;
-            padding: 4px 8px;
-            border-radius: 4px;
-            color: white;
-            display: inline-block;
-            cursor: pointer;
-        }
-        
-        .perf-score.good {
-            background-color: #4caf50;
-        }
-        
-        .perf-score.needs-improvement {
-            background-color: #ff9800;
-        }
-        
-        .perf-score.poor {
-            background-color: #f44336;
-        }
-        
-        /* Translation badges */
-        .translation-badges {
+        .tabs {
             display: flex;
-            gap: 4px;
-            margin-top: 4px;
-            flex-wrap: wrap;
-        }
-        
-        .translation-badge {
-            background: #e3f2fd;
-            color: #1976d2;
-            padding: 2px 6px;
-            border-radius: 3px;
-            font-size: 11px;
-            text-transform: uppercase;
-        }
-        
-        /* Expandable lighthouse details */
-        .lighthouse-details {
-            display: none;
-            background: #f8f9fa;
-            padding: 10px;
-            margin-top: 10px;
-            border-radius: 4px;
-            font-size: 14px;
-        }
-        
-        .lighthouse-details.show {
-            display: block;
-        }
-        
-        .lighthouse-metric {
-            margin: 5px 0;
-        }
-        
-        /* Top 10 issues section */
-        .issues-section {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-        
-        .issues-section h2 {
-            color: #333;
+            gap: 10px;
+            border-bottom: 2px solid #e9ecef;
             margin-bottom: 20px;
         }
         
-        .issue-item {
-            background: #f8f9fa;
-            padding: 15px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border-left: 4px solid #dc3545;
-        }
-        
-        .issue-title {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
-        }
-        
-        .issue-count {
-            color: #666;
-            font-size: 14px;
-        }
-        
-        .issue-pages {
-            margin-top: 5px;
-            font-size: 13px;
-            color: #666;
-        }
-        
-        .generated-time {
-            text-align: center;
-            color: #666;
-            font-size: 0.9em;
-            margin-top: 30px;
-            padding: 20px;
-        }
-        
-        /* Toggle switch styles */
-        .toggle-switch {
-            position: relative;
-            display: inline-block;
-            width: 50px;
-            height: 24px;
-        }
-        
-        .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-        
-        .toggle-slider {
-            position: absolute;
+        .tab {
+            background: none;
+            border: none;
+            padding: 10px 20px;
             cursor: pointer;
-            top: 0;
+            position: relative;
+            color: #666;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .tab.active {
+            color: #007bff;
+        }
+        
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
             left: 0;
             right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 24px;
+            height: 2px;
+            background: #007bff;
         }
         
-        .toggle-slider:before {
-            position: absolute;
-            content: "";
-            height: 18px;
-            width: 18px;
-            left: 3px;
-            bottom: 3px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
+        .tab-metric {
+            background: #e9ecef;
+            color: #495057;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8em;
+            margin-left: 8px;
         }
         
-        input:checked + .toggle-slider {
-            background-color: #4caf50;
+        .tab.active .tab-metric {
+            background: #007bff;
+            color: white;
         }
         
-        input:checked + .toggle-slider:before {
-            transform: translateX(26px);
+        /* Performance Metrics */
+        .performance-card {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
         }
         
-        .inactive-row {
-            opacity: 0.6;
-            background-color: #f5f5f5;
+        .performance-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
         }
         
-        @media (max-width: 768px) {
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 15px;
-            }
-            
-            th, td {
-                padding: 8px 5px;
-                font-size: 14px;
-            }
-            
-            .stat-value {
-                font-size: 2em;
-            }
+        .performance-title {
+            font-size: 1.2em;
+            font-weight: 600;
         }
+        
+        .performance-avg {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #28a745;
+        }
+        
+        .metric-bars {
+            display: grid;
+            gap: 10px;
+        }
+        
+        .metric-bar {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .metric-label {
+            width: 120px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        
+        .metric-progress {
+            flex: 1;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .metric-fill {
+            height: 100%;
+            background: #28a745;
+            transition: width 0.3s;
+        }
+        
+        .metric-value {
+            width: 40px;
+            text-align: right;
+            font-weight: 600;
+        }
+        
+        /* Data table specific styles */
+        .filter-controls {
+            margin-bottom: 20px;
+        }
+        
+        .filter-controls input {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 300px;
+        }
+        
+        /* Status colors */
+        .status-good { color: #28a745; }
+        .status-warning { color: #ffc107; }
+        .status-poor { color: #dc3545; }
   </style>
  </head>
  <body>
-  <nav class="simple-nav">
-   <div class="nav-container">
-    <a href="/wedding-customs/">
-     <picture>
-      <source srcset="cdn/img/everafter-logo.avif" type="image/avif"/>
-      <source srcset="cdn/img/everafter-logo.webp" type="image/webp"/>
-      <img alt="EverAfter.com - Wedding Planning Made Simple" decoding="async" height="50" loading="eager" src="/cdn/img/everafter-logo.png" width="150"/>
-     </picture>
-    </a>
-    <ul class="nav-links">
-     <li>
-      <a href="https://www.everafter.com/chapels">
-       Chapels
-      </a>
-     </li>
-     <li>
-      <a href="https://www.everafter.com/products/receptions">
-       Receptions
-      </a>
-     </li>
-     <li>
-      <a href="https://www.everafter.com/packages">
-       Packages
-      </a>
-     </li>
-    </ul>
-   </div>
-  </nav>
   <div class="dashboard-container">
    <h1>
-    Wedding Traditions Content Dashboard
+    Content Dashboard
    </h1>
-   <p class="subtitle">
-    Complete Statistics for All Countries
-   </p>
-   <div style="background: #e0f2fe; border: 1px solid #0284c7; padding: 15px; margin-bottom: 20px; border-radius: 5px;">
-    <strong>
-     Managing Active Status:
-    </strong>
-    <br/>
-    • Toggle switches show current status (green = active, gray = inactive)
-    <br/>
-    • To change status:
-    <code>
-     python3 scripts/toggle_active_status.py "Country Name"
-    </code>
-    <br/>
-    • To set inactive:
-    <code>
-     python3 scripts/toggle_active_status.py "Country Name" 0
-    </code>
-    <br/>
-    • To list inactive:
-    <code>
-     python3 scripts/toggle_active_status.py --list-inactive
-    </code>
-    <br/>
-    •
-    <em>
-     Note: Refresh dashboard after making changes to see updates
-    </em>
-   </div>
-   <div class="stats-summary">
-    <div class="stats-grid">
-     <div class="stat-item">
-      <span class="stat-value">
-       244
-      </span>
-      <span class="stat-label">
+   <nav class="dashboard-nav">
+    <div class="nav-left">
+     <div class="toggle-container">
+      <a class="toggle-btn" data-page="index" href="index.html">
+       Content
+      </a>
+      <a class="toggle-btn" data-page="api" href="api.html">
+       Lighthouse API
+      </a>
+      <a class="toggle-btn" data-page="inlinks" href="inlinks.html">
+       Inlinks
+      </a>
+     </div>
+    </div>
+    <div class="nav-right">
+     <button class="doc-toggle-btn" onclick="viewDocument('workflow')" title="View Pipeline Workflow">
+      📋 Workflow
+     </button>
+    </div>
+   </nav>
+   <div class="container">
+    <div class="timestamp">
+     Last Updated:
+     <span id="lastUpdated">
+      Loading...
+     </span>
+    </div>
+    <!-- Stats Grid -->
+    <div class="stats-grid" id="summaryStats">
+     <div class="stat-card">
+      <h3>
+       Total Articles
+      </h3>
+      <div class="stat-number" id="totalArticles">
+       -
+      </div>
+     </div>
+     <div class="stat-card">
+      <h3>
        Countries
-      </span>
+      </h3>
+      <div class="stat-number" id="totalCountries">
+       -
+      </div>
      </div>
-     <div class="stat-item">
-      <span class="stat-value">
-       33,181
-      </span>
-      <span class="stat-label">
-       Total Words
-      </span>
-     </div>
-     <div class="stat-item">
-      <span class="stat-value">
-       1,026
-      </span>
-      <span class="stat-label">
+     <div class="stat-card">
+      <h3>
        Images
-      </span>
+      </h3>
+      <div class="stat-number" id="totalImages">
+       -
+      </div>
      </div>
-     <div class="stat-item">
-      <span class="stat-value">
-       5,158
-      </span>
-      <span class="stat-label">
+     <div class="stat-card">
+      <h3>
        Audio Files
-      </span>
+      </h3>
+      <div class="stat-number" id="totalAudio">
+       -
+      </div>
      </div>
-     <div class="stat-item">
-      <span class="stat-value">
-       2,854
-      </span>
-      <span class="stat-label">
-       Sections
-      </span>
+     <div class="stat-card">
+      <h3>
+       Total Words
+      </h3>
+      <div class="stat-number" id="totalWords">
+       -
+      </div>
      </div>
-     <div class="stat-item">
-      <span class="stat-value">
-       0
-      </span>
-      <span class="stat-label">
-       FAQs
-      </span>
+     <div class="stat-card">
+      <h3>
+       Coverage
+      </h3>
+      <div class="stat-number" id="coverage">
+       -
+      </div>
+     </div>
+    </div>
+    <!-- Tab Container -->
+    <div class="tab-container">
+     <div class="tabs">
+      <button class="tab active" onclick="showSummaryTab('content')">
+       Content
+       <span class="tab-metric" id="articlesCount">
+        -
+       </span>
+      </button>
+      <button class="tab" onclick="showSummaryTab('media')">
+       Media
+       <span class="tab-metric" id="imagesCount">
+        -
+       </span>
+      </button>
+      <button class="tab" onclick="showSummaryTab('performance')">
+       Performance
+       <span class="tab-metric" id="avgScore">
+        -
+       </span>
+      </button>
+      <button class="tab" onclick="showSummaryTab('technical')">
+       Technical
+       <span class="tab-metric" id="scriptsCount">
+        -
+       </span>
+      </button>
+     </div>
+     <div id="tabContent">
+      <!-- Content will be dynamically loaded here -->
+     </div>
+    </div>
+    <!-- Main Data Table Section -->
+    <div class="section">
+     <h2>
+      Country Articles
+     </h2>
+     <div class="filter-controls">
+      <input id="searchInput" onkeyup="filterTable()" placeholder="Search countries..." type="text"/>
+     </div>
+     <div id="dataTableContainer">
+      <div class="table-container">
+       <table id="countriesTable">
+        <thead>
+         <tr>
+          <th>
+           Country
+          </th>
+          <th>
+           Words
+          </th>
+          <th>
+           Images
+          </th>
+          <th>
+           Audio
+          </th>
+          <th>
+           Sections
+          </th>
+          <th>
+           FAQs
+          </th>
+          <th>
+           Performance
+          </th>
+          <th>
+           SEO
+          </th>
+         </tr>
+        </thead>
+        <tbody id="countriesTableBody">
+         <tr>
+          <td class="text-center" colspan="8">
+           Loading data...
+          </td>
+         </tr>
+        </tbody>
+       </table>
+      </div>
      </div>
     </div>
    </div>
-   <div class="table-container">
-    <table id="countriesTable">
-     <thead>
-      <tr>
-       <th>
-        Active
-       </th>
-       <th class="sortable" data-sort="name">
-        Country
-       </th>
-       <th class="sortable" data-sort="words">
-        Words
-       </th>
-       <th class="sortable" data-sort="images">
-        Images
-       </th>
-       <th class="sortable" data-sort="audio">
-        Audio
-       </th>
-       <th class="sortable" data-sort="sections">
-        Sections
-       </th>
-       <th class="sortable" data-sort="faqs">
-        FAQs
-       </th>
-       <th class="sortable" data-sort="inlinks">
-        Inlinks
-       </th>
-       <th class="sortable" data-sort="score">
-        Score
-       </th>
-       <th class="sortable" data-sort="fcp">
-        FCP
-       </th>
-       <th class="sortable" data-sort="tti">
-        TTI
-       </th>
-      </tr>
-     </thead>
-     <tbody id="tableBody">
-      <!-- Table rows will be populated by JavaScript -->
-     </tbody>
-    </table>
-   </div>
-   <div class="issues-section">
-    <h2>
-     Top-10 Lighthouse Fixes List
-    </h2>
-    <div id="issuesList">
+  </div>
+  <!-- Workflow Modal -->
+  <div class="modal" id="workflowModal">
+   <div class="modal-content">
+    <div class="modal-header">
+     <h2>
+      Pipeline Workflow Status
+     </h2>
+     <button class="close" onclick="closeModal()">
+      ×
+     </button>
     </div>
-   </div>
-   <div class="generated-time">
-    Generated on {datetime.now().strftime('%B %d, %Y at %I:%M %p')}
+    <div id="workflowContent">
+     <p class="text-center">
+      Loading workflow data...
+     </p>
+    </div>
    </div>
   </div>
   <script>
-   // Country data with lighthouse info
-        const countriesData = {json.dumps(countries_with_translations, indent=2)};
-        
-        // Convert to array for easier manipulation
-        let countries = Object.entries(countriesData).map(([name, data]) => {{
-            const stats = data.stats;
-            const lighthouse = data.lighthouse;
-            return {{
-                name: name,
-                filename: stats.filename || `${{stats.slug || name.toLowerCase().replace(/\s+/g, '-')}}.html`,
-                words: stats.word_count || 0,
-                images: stats.image_count || 0,
-                audio: stats.pronunciation_count || 0,
-                sections: stats.section_count || 0,
-                faqs: stats.faq_count || 0,
-                inlinks: stats.inlink_count || 0,
-                score: lighthouse.score || 0,
-                fcp: lighthouse.fcp || 0,
-                tti: lighthouse.tti || 0,
-                scoreColor: lighthouse.color,
-                translations: data.translations || [],
-                lighthouseData: lighthouse.full_data,
-                active: data.active !== undefined ? data.active : 1
-            }};
-        }});
-        
-        // Sort function
-        function sortCountries(field, order) {{
-            countries.sort((a, b) => {{
-                let aVal = a[field];
-                let bVal = b[field];
-                
-                if (typeof aVal === 'string') {{
-                    aVal = aVal.toLowerCase();
-                    bVal = bVal.toLowerCase();
-                }}
-                
-                if (aVal < bVal) return order === 'asc' ? -1 : 1;
-                if (aVal > bVal) return order === 'asc' ? 1 : -1;
-                return 0;
-            }});
-            renderTable();
-        }}
-        
-        // Format time metric
-        function formatTime(ms) {{
-            if (!ms) return '-';
-            return (ms / 1000).toFixed(1) + 's';
-        }}
-        
-        // Get performance class
-        function getScoreClass(score) {{
-            if (score >= 90) return 'good';
-            if (score >= 50) return 'needs-improvement';
-            return 'poor';
-        }}
-        
-        // Toggle lighthouse details
-        function toggleDetails(index) {{
-            const details = document.getElementById(`details-${{index}}`);
-            if (details) {{
-                details.classList.toggle('show');
-            }}
-        }}
-        
-        // Toggle active status (display only - actual changes via command line)
-        function toggleActive(countryName, isActive) {{
-            // Show alert with instructions
-            const status = isActive ? '1' : '0';
-            const action = isActive ? 'activate' : 'deactivate';
+   // Set active class based on current page
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop().replace('.html', '') || 'index';
+            const toggleButtons = document.querySelectorAll('.toggle-btn');
             
-            alert(`To ${{action}} "${{countryName}}", run this command:\n\npython3 scripts/toggle_active_status.py "${{countryName}}" ${{status}}\n\nThen refresh this page to see the change.`);
-            
-            // Revert the checkbox since we can't actually update
-            setTimeout(() => {{
-                renderTable();
-            }}, 100);
-        }}
-        
-        // Render table
-        function renderTable(data = countries) {{
-            const tbody = document.getElementById('tableBody');
-            tbody.innerHTML = '';
-            
-            data.forEach((country, index) => {{
-                const row = document.createElement('tr');
-                
-                // Create translation badges HTML
-                let translationBadges = '';
-                if (country.translations.length > 0) {{
-                    translationBadges = '<div class="translation-badges">';
-                    country.translations.forEach(lang => {{
-                        translationBadges += `<span class="translation-badge">${{lang}}</span>`;
-                    }});
-                    translationBadges += '</div>';
-                }}
-                
-                // Create lighthouse details
-                let lighthouseDetails = '';
-                if (country.lighthouseData && Object.keys(country.lighthouseData).length > 0) {{
-                    lighthouseDetails = `<div id="details-${{index}}" class="lighthouse-details">`;
-                    const data = country.lighthouseData;
-                    lighthouseDetails += `<div class="lighthouse-metric">DOM Nodes: ${{data.dom_nodes || '-'}}</div>`;
-                    lighthouseDetails += `<div class="lighthouse-metric">Images: ${{data.images || '-'}}</div>`;
-                    lighthouseDetails += `<div class="lighthouse-metric">Scripts: ${{data.scripts || '-'}}</div>`;
-                    lighthouseDetails += `<div class="lighthouse-metric">Total Requests: ${{data.total_requests || '-'}}</div>`;
-                    lighthouseDetails += `<div class="lighthouse-metric">Page Size: ${{data.page_size ? (data.page_size / 1024 / 1024).toFixed(2) + ' MB' : '-'}}</div>`;
-                    lighthouseDetails += '</div>';
-                }}
-                
-                // Add class to row if inactive
-                if (!country.active) {
-                    row.classList.add('inactive-row');
+            toggleButtons.forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.getAttribute('data-page') === currentPage) {
+                    btn.classList.add('active');
                 }
-                
-                row.innerHTML = `
-                    <td class="number-cell">
-                        <label class="toggle-switch">
-                            <input type="checkbox" ${{country.active ? 'checked' : ''}} onchange="toggleActive('${{country.name}}', this.checked)">
-                            <span class="toggle-slider"></span>
-                        </label>
-                    </td>
-                    <td class="country-name">
-                        <a href="${{country.filename}}">${{country.name}}</a>
-                        ${{translationBadges}}
-                    </td>
-                    <td class="number-cell ${{country.words === 0 ? 'zero' : ''}}">${{country.words.toLocaleString()}}</td>
-                    <td class="number-cell ${{country.images === 0 ? 'zero' : ''}}">${{country.images}}</td>
-                    <td class="number-cell ${{country.audio === 0 ? 'zero' : ''}}">${{country.audio}}</td>
-                    <td class="number-cell ${{country.sections === 0 ? 'zero' : ''}}">${{country.sections}}</td>
-                    <td class="number-cell ${{country.faqs === 0 ? 'zero' : ''}}">${{country.faqs}}</td>
-                    <td class="number-cell ${{country.inlinks === 0 ? 'zero' : ''}}">${{country.inlinks}}</td>
-                    <td class="number-cell">
-                        <span class="perf-score ${{getScoreClass(country.score)}}" onclick="toggleDetails(${{index}})">${{country.score || '-'}}</span>
-                        ${{lighthouseDetails}}
-                    </td>
-                    <td class="number-cell">${{formatTime(country.fcp)}}</td>
-                    <td class="number-cell">${{formatTime(country.tti)}}</td>
-                `;
-                tbody.appendChild(row);
-            }});
-        }}
+            });
+            
+            // Load dashboard data
+            loadDashboardData();
+        });
         
-        // Track sort order for each column
-        let sortOrders = {{}};
-        
-        // Click on table headers to sort
-        document.querySelectorAll('th.sortable').forEach(th => {{
-            th.addEventListener('click', () => {{
-                const field = th.dataset.sort;
-                const currentOrder = sortOrders[field] || 'asc';
-                const newOrder = currentOrder === 'asc' ? 'desc' : 'asc';
-                sortOrders[field] = newOrder;
+        // Load dashboard data
+        async function loadDashboardData() {
+            try {
+                const response = await fetch('data/dashboard-stats.json');
+                const data = await response.json();
                 
-                sortCountries(field, newOrder);
+                // Update summary stats
+                document.getElementById('lastUpdated').textContent = new Date(data.last_updated).toLocaleString();
+                document.getElementById('totalArticles').textContent = data.overview.total_articles;
+                document.getElementById('totalCountries').textContent = data.overview.total_countries;
+                document.getElementById('totalImages').textContent = formatNumber(data.overview.total_images);
+                document.getElementById('totalAudio').textContent = formatNumber(data.overview.total_pronunciations);
+                document.getElementById('totalWords').textContent = formatNumber(data.overview.total_words);
+                document.getElementById('coverage').textContent = data.overview.coverage_percentage + '%';
                 
-                // Update header classes
-                document.querySelectorAll('th.sortable').forEach(header => {{
-                    header.classList.remove('sorted-asc', 'sorted-desc');
-                }});
-                th.classList.add(newOrder === 'asc' ? 'sorted-asc' : 'sorted-desc');
-            }});
-        }});
+                // Update tab metrics
+                document.getElementById('articlesCount').textContent = data.content.articles.total;
+                document.getElementById('imagesCount').textContent = formatNumber(data.content.media.images.total);
+                document.getElementById('avgScore').textContent = Math.round(data.performance.lighthouse.average_performance);
+                document.getElementById('scriptsCount').textContent = data.technical.build_system.total_scripts;
+                
+                // Load initial tab content
+                showSummaryTab('content');
+                
+                // Load detailed country data
+                loadCountryData();
+                
+            } catch (error) {
+                console.error('Error loading dashboard data:', error);
+            }
+        }
         
-        // Initial render
-        renderTable();
+        // Format numbers
+        function formatNumber(num) {
+            if (num >= 1000) {
+                return (num / 1000).toFixed(1) + 'K';
+            }
+            return num.toString();
+        }
+        
+        // Tab switching
+        function showSummaryTab(tabName) {
+            // Update active tab
+            document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // Load tab content
+            const contentDiv = document.getElementById('tabContent');
+            contentDiv.innerHTML = '<p class="text-center">Loading...</p>';
+            
+            // Load content based on tab
+            fetch('data/dashboard-stats.json')
+                .then(response => response.json())
+                .then(data => {
+                    let content = '';
+                    switch(tabName) {
+                        case 'content':
+                            content = `
+                                <div class="stats-grid">
+                                    <div class="stat-card">
+                                        <h3>Articles</h3>
+                                        <div class="stat-number">${data.content.articles.total}</div>
+                                        <div class="stat-label">Avg ${data.content.articles.average_words} words</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>Sections per Article</h3>
+                                        <div class="stat-number">${data.content.articles.average_sections}</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>Total FAQs</h3>
+                                        <div class="stat-number">${data.content.articles.total_faqs}</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>FAQ Coverage</h3>
+                                        <div class="stat-number">${data.health.content_completeness.faq_coverage}</div>
+                                    </div>
+                                </div>
+                            `;
+                            break;
+                        case 'media':
+                            content = `
+                                <div class="stats-grid">
+                                    <div class="stat-card">
+                                        <h3>Total Images</h3>
+                                        <div class="stat-number">${formatNumber(data.content.media.images.total)}</div>
+                                        <div class="stat-label">${data.content.media.images.total_size_mb} MB</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>Image Formats</h3>
+                                        <div class="stat-label">AVIF, WebP, JPG</div>
+                                        <div class="stat-number">${formatNumber(data.content.media.images.webp_available)} WebP</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>Audio Files</h3>
+                                        <div class="stat-number">${formatNumber(data.content.media.audio.total_pronunciations)}</div>
+                                        <div class="stat-label">MP3 pronunciations</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>Audio Coverage</h3>
+                                        <div class="stat-number">${data.content.media.audio.coverage}</div>
+                                    </div>
+                                </div>
+                            `;
+                            break;
+                        case 'performance':
+                            content = `
+                                <div class="performance-card">
+                                    <div class="performance-header">
+                                        <div class="performance-title">Lighthouse Scores</div>
+                                        <div class="performance-avg">${Math.round(data.performance.lighthouse.average_performance)}</div>
+                                    </div>
+                                    <div class="metric-bars">
+                                        <div class="metric-bar">
+                                            <div class="metric-label">Performance</div>
+                                            <div class="metric-progress">
+                                                <div class="metric-fill" style="width: ${data.performance.lighthouse.average_performance}%"></div>
+                                            </div>
+                                            <div class="metric-value">${Math.round(data.performance.lighthouse.average_performance)}</div>
+                                        </div>
+                                        <div class="metric-bar">
+                                            <div class="metric-label">Accessibility</div>
+                                            <div class="metric-progress">
+                                                <div class="metric-fill" style="width: ${data.performance.lighthouse.average_accessibility}%"></div>
+                                            </div>
+                                            <div class="metric-value">${Math.round(data.performance.lighthouse.average_accessibility)}</div>
+                                        </div>
+                                        <div class="metric-bar">
+                                            <div class="metric-label">Best Practices</div>
+                                            <div class="metric-progress">
+                                                <div class="metric-fill" style="width: ${data.performance.lighthouse.average_best_practices}%"></div>
+                                            </div>
+                                            <div class="metric-value">${Math.round(data.performance.lighthouse.average_best_practices)}</div>
+                                        </div>
+                                        <div class="metric-bar">
+                                            <div class="metric-label">SEO</div>
+                                            <div class="metric-progress">
+                                                <div class="metric-fill" style="width: ${data.performance.lighthouse.average_seo}%"></div>
+                                            </div>
+                                            <div class="metric-value">${Math.round(data.performance.lighthouse.average_seo)}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h3 style="margin-top: 20px;">Page Load Times</h3>
+                                <div class="stats-grid">
+                                    <div class="stat-card">
+                                        <h3>3G</h3>
+                                        <div class="stat-number">${data.technical.optimization.load_times['3g']}</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>4G</h3>
+                                        <div class="stat-number">${data.technical.optimization.load_times['4g']}</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>WiFi</h3>
+                                        <div class="stat-number">${data.technical.optimization.load_times.wifi}</div>
+                                    </div>
+                                </div>
+                            `;
+                            break;
+                        case 'technical':
+                            content = `
+                                <div class="stats-grid">
+                                    <div class="stat-card">
+                                        <h3>Build Scripts</h3>
+                                        <div class="stat-number">${data.technical.build_system.build_scripts}</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>Data Scripts</h3>
+                                        <div class="stat-number">${data.technical.build_system.data_scripts}</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>Test Scripts</h3>
+                                        <div class="stat-number">${data.technical.build_system.test_scripts}</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>Avg Build Time</h3>
+                                        <div class="stat-number">${data.technical.build_system.average_build_time}s</div>
+                                        <div class="stat-label">per country</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>Total Build Time</h3>
+                                        <div class="stat-number">${data.technical.build_system.total_build_time_minutes} min</div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <h3>Compression</h3>
+                                        <div class="stat-number">${Math.round(data.technical.optimization.gzip_compression * 100)}%</div>
+                                        <div class="stat-label">GZIP savings</div>
+                                    </div>
+                                </div>
+                            `;
+                            break;
+                    }
+                    contentDiv.innerHTML = content;
+                })
+                .catch(error => {
+                    contentDiv.innerHTML = '<div class="alert alert-warning">Error loading tab content</div>';
+                });
+        }
+        
+        // Workflow modal functions
+        async function viewDocument(docType) {
+            if (docType === 'workflow') {
+                document.getElementById('workflowModal').style.display = 'block';
+                await loadWorkflowData();
+            }
+        }
+        
+        function closeModal() {
+            document.getElementById('workflowModal').style.display = 'none';
+        }
+        
+        async function loadWorkflowData() {
+            const contentDiv = document.getElementById('workflowContent');
+            try {
+                const response = await fetch('data/workflow-stats.json');
+                const data = await response.json();
+                contentDiv.innerHTML = formatWorkflowContent(data);
+            } catch (error) {
+                contentDiv.innerHTML = `
+                    <div class="alert alert-warning">
+                        <strong>Unable to load workflow data.</strong><br>
+                        ${error.message}
+                    </div>`;
+            }
+        }
+        
+        function formatWorkflowContent(data) {
+            return `
+                <div class="workflow-summary">
+                    <h3>Pipeline Status: ${data.pipeline_status.overall_status}</h3>
+                    <p>Last run: ${new Date(data.pipeline_status.last_run).toLocaleString()}</p>
+                    <p>Success rate: ${data.pipeline_status.success_rate}%</p>
+                </div>`;
+        }
+        
+        // Load country data
+        async function loadCountryData() {
+            try {
+                const response = await fetch('data/content-details.json');
+                const data = await response.json();
+                const tbody = document.getElementById('countriesTableBody');
+                
+                if (data && Object.keys(data).length > 0) {
+                    const rows = [];
+                    
+                    // Process each country
+                    Object.entries(data).forEach(([country, countryData]) => {
+                        if (countryData.articles && countryData.articles.length > 0) {
+                            // Sum up all articles for the country
+                            const totals = countryData.articles.reduce((acc, article) => {
+                                acc.words += article.word_count || 0;
+                                acc.images += article.image_count || 0;
+                                acc.pronunciations += article.pronunciation_count || 0;
+                                acc.sections += article.section_count || 0;
+                                acc.faqs += article.faq_count || 0;
+                                acc.articles++;
+                                return acc;
+                            }, { words: 0, images: 0, pronunciations: 0, sections: 0, faqs: 0, articles: 0 });
+                            
+                            // Find the English article for the link
+                            const englishArticle = countryData.articles.find(a => a.language === 'en') || countryData.articles[0];
+                            const slug = englishArticle.slug || englishArticle.filename.replace('.html', '');
+                            
+                            rows.push({
+                                name: country,
+                                slug: slug,
+                                words: totals.words,
+                                images: totals.images,
+                                pronunciations: totals.pronunciations,
+                                sections: Math.round(totals.sections / totals.articles),
+                                faqs: Math.round(totals.faqs / totals.articles)
+                            });
+                        }
+                    });
+                    
+                    // Sort by country name
+                    rows.sort((a, b) => a.name.localeCompare(b.name));
+                    
+                    // Render the table
+                    tbody.innerHTML = rows.map(country => `
+                        <tr>
+                            <td><a href="/wedding-customs/${country.slug}/" target="_blank">${country.name}</a></td>
+                            <td>${formatNumber(country.words)}</td>
+                            <td>${country.images}</td>
+                            <td>${country.pronunciations}</td>
+                            <td>${country.sections}</td>
+                            <td>${country.faqs}</td>
+                            <td>-</td>
+                            <td>-</td>
+                        </tr>
+                    `).join('');
+                } else {
+                    tbody.innerHTML = '<tr><td colspan="8" class="text-center">No data available</td></tr>';
+                }
+            } catch (error) {
+                console.error('Error loading country data:', error);
+                document.getElementById('countriesTableBody').innerHTML = 
+                    '<tr><td colspan="8" class="text-center alert alert-warning">Error loading country data</td></tr>';
+            }
+        }
+        
+        // Get score class
+        function getScoreClass(score) {
+            if (score >= 90) return 'status-good';
+            if (score >= 50) return 'status-warning';
+            return 'status-poor';
+        }
+        
+        // Table filtering
+        function filterTable() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toLowerCase();
+            const table = document.getElementById('countriesTable');
+            if (table) {
+                const rows = table.getElementsByTagName('tr');
+                for (let i = 1; i < rows.length; i++) {
+                    const cells = rows[i].getElementsByTagName('td');
+                    let found = false;
+                    for (let j = 0; j < cells.length; j++) {
+                        if (cells[j].textContent.toLowerCase().includes(filter)) {
+                            found = true;
+                            break;
+                        }
+                    }
+                    rows[i].style.display = found ? '' : 'none';
+                }
+            }
+        }
   </script>
+  <style>
+   /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+        }
+        
+        .modal-content {
+            background-color: white;
+            margin: 5% auto;
+            padding: 0;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .modal-header h2 {
+            margin: 0;
+            color: #333;
+        }
+        
+        .close {
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: #aaa;
+        }
+        
+        .close:hover {
+            color: #000;
+        }
+        
+        #workflowContent {
+            padding: 20px;
+            max-height: 70vh;
+            overflow-y: auto;
+        }
+        
+        .workflow-summary {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+  </style>
  </body>
 </html>

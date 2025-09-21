@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Test Workflow Data</title>
+</head>
+<body>
+    <h1>Testing Workflow Data Load</h1>
+    <div id="status">Loading...</div>
+    <pre id="data"></pre>
+    
+    <script>
+        async function testLoad() {
+            const statusEl = document.getElementById('status');
+            const dataEl = document.getElementById('data');
+            
+            try {
+                const response = await fetch('data/workflow-stats.json');
+                statusEl.textContent = `Response status: ${response.status} ${response.statusText}`;
+                
+                if (response.ok) {
+                    const data = await response.json();
+                    dataEl.textContent = JSON.stringify(data, null, 2);
+                    statusEl.style.color = 'green';
+                } else {
+                    statusEl.style.color = 'red';
+                }
+            } catch (error) {
+                statusEl.textContent = `Error: ${error.message}`;
+                statusEl.style.color = 'red';
+                dataEl.textContent = error.stack;
+            }
+        }
+        
+        testLoad();
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+{
+  "last_updated": "2025-09-09T15:11:48.639604",
+  "overview": {
+    "total_articles": 258,
+    "total_countries": 244,
+    "coverage_percentage": 87.2,
+    "total_words": 1745328,
+    "total_images": 10486,
+    "total_pronunciations": 6687,
+    "total_scripts": 442
+  },
+  "performance": {
+    "lighthouse": {
+      "average_performance": 84.72,
+      "average_accessibility": 94.49,
+      "average_best_practices": 93.94,
+      "average_seo": 97.58
+    },
+    "core_web_vitals": {
+      "average_fcp": 1200,
+      "average_lcp": 2100,
+      "average_cls": 0.05,
+      "average_tbt": 150,
+      "average_tti": 3800
+    },
+    "page_size": {
+      "average_html_size": 75280,
+      "average_total_size": 487230,
+      "largest_page": {
+        "country": "India",
+        "size": 892340
+      },
+      "smallest_page": {
+        "country": "Monaco",
+        "size": 45670
+      }
+    }
+  },
+  "content": {
+    "articles": {
+      "total": 258,
+      "average_words": 6713,
+      "average_sections": 12,
+      "total_faqs": 1820,
+      "articles_with_faqs": 260
+    },
+    "media": {
+      "images": {
+        "total": 10486,
+        "total_size_mb": 412.6,
+        "webp_available": 4925,
+        "formats": {
+          "jpg": 5225,
+          "webp": 4925,
+          "png": 336
+        }
+      },
+      "audio": {
+        "total_pronunciations": 6687,
+        "unique_mp3s": 3086,
+        "pages_with_audio": 239,
+        "coverage": "92.0%"
+      },
+      "external": {
+        "youtube_embeds": 0,
+        "tiktok_embeds": 0,
+        "total_external_links": 1842
+      }
+    }
+  },
+  "technical": {
+    "build_system": {
+      "total_scripts": 442,
+      "build_scripts": 52,
+      "data_scripts": 98,
+      "api_scripts": 24,
+      "test_scripts": 45,
+      "deployment_scripts": 38,
+      "average_build_time": 0.85,
+      "total_build_time_minutes": 3.5
+    },
+    "optimization": {
+      "average_html_size": 75280,
+      "average_total_size": 487230,
+      "css_size": 9128,
+      "js_size": 8425,
+      "gzip_compression": 0.75,
+      "load_times": {
+        "3g_slow": "7.32s",
+        "3g": "1.95s",
+        "4g": "0.24s",
+        "wifi": "0.10s",
+        "fiber": "0.03s"
+      }
+    }
+  },
+  "health": {
+    "lighthouse_coverage": 87.2,
+    "passing_accessibility": 198,
+    "passing_performance": 180,
+    "passing_seo": 217,
+    "content_completeness": {
+      "articles_with_faqs": 260,
+      "articles_with_audio": 239,
+      "articles_with_images": 260,
+      "faq_coverage": "100%",
+      "audio_coverage": "92.0%",
+      "image_coverage": "100%"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "total_articles": 258,
+  "tested_articles": 225,
+  "total_countries": 211,
+  "coverage": {
+    "percentage": 87.2,
+    "tested": 225,
+    "total": 258
+  },
+  "average_scores": {
+    "performance": 84.72,
+    "accessibility": 94.49,
+    "best_practices": 93.94,
+    "seo": 97.58
+  },
+  "average_metrics": {
+    "fcp_ms": 1200,
+    "lcp_ms": 2100,
+    "tti_ms": 3800,
+    "cls": 0.05,
+    "speed_index_ms": 1800,
+    "tbt_ms": 150
+  },
+  "score_range": {
+    "performance": {
+      "min": 67,
+      "max": 98
+    },
+    "accessibility": {
+      "min": 82,
+      "max": 100
+    },
+    "seo": {
+      "min": 92,
+      "max": 100
+    }
+  },
+  "last_updated": "2025-09-09T15:11:48.608798"
+}

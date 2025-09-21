@@ -1,0 +1,14 @@
+{
+  "total_countries": 244,
+  "total_articles": 258,
+  "generated_at": "2025-09-09T15:11:48.600504",
+  "total_words": 1745328,
+  "total_images": 10486,
+  "total_pronunciations": 6687,
+  "total_sections": 3120,
+  "total_faqs": 1820,
+  "average_words_per_article": 6713,
+  "average_sections_per_article": 12,
+  "articles_with_faqs": 260,
+  "articles_with_audio": 239
+}
