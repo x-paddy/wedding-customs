@@ -1,0 +1,33 @@
+# Robots.txt for PageSpeed testing site
+# Block all search engines from indexing this test deployment
+
+User-agent: *
+Disallow: /
+
+# Block specific bots that might ignore the wildcard
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: Slurp
+Disallow: /
+
+User-agent: DuckDuckBot
+Disallow: /
+
+User-agent: Baiduspider
+Disallow: /
+
+User-agent: facebookexternalhit
+Disallow: /
+
+# Allow PageSpeed Insights bot
+User-agent: Chrome-Lighthouse
+Allow: /
+
+User-agent: Google-PageSpeed-Insights
+Allow: /
+
+# Sitemap: none (no sitemap for test site)
