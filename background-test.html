@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Preservation Test</title>
+    <style>
+        body { margin: 0; font-family: Arial; }
+        .test-section {
+            width: 100%;
+            margin: 20px 0;
+            position: relative;
+            min-height: 200px;
+        }
+        .status {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background: white;
+            border: 2px solid black;
+            font-weight: bold;
+        }
+        .pass { border-color: green; color: green; }
+        .fail { border-color: red; color: red; }
+    </style>
+    <style id="font-styles">@font-face { font-family: 'Inter'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://cdn.everafter.com/traditions/fonts/inter.woff2') format('woff2'); } @font-face { font-family: 'Inter'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://cdn.everafter.com/traditions/fonts/inter.woff2') format('woff2'); } @font-face { font-family: 'Inter'; font-style: normal; font-weight: 600; font-display: swap; src: url('https://cdn.everafter.com/traditions/fonts/inter.woff2') format('woff2'); } @font-face { font-family: 'Inter'; font-style: normal; font-weight: 700; font-display: swap; src: url('https://cdn.everafter.com/traditions/fonts/inter.woff2') format('woff2'); } @font-face { font-family: 'Raleway'; font-style: normal; font-weight: 400; font-display: swap; src: url('https://cdn.everafter.com/traditions/fonts/raleway.woff2') format('woff2'); } @font-face { font-family: 'Raleway'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://cdn.everafter.com/traditions/fonts/raleway.woff2') format('woff2'); } @font-face { font-family: 'Raleway'; font-style: normal; font-weight: 600; font-display: swap; src: url('https://cdn.everafter.com/traditions/fonts/raleway.woff2') format('woff2'); } @font-face { font-family: 'Raleway'; font-style: normal; font-weight: 700; font-display: swap; src: url('https://cdn.everafter.com/traditions/fonts/raleway.woff2') format('woff2'); } @font-face { font-family: 'Caveat'; font-style: normal; font-weight: 500; font-display: swap; src: url('https://cdn.everafter.com/traditions/fonts/caveat.woff2') format('woff2'); }</style>
+    
+</head>
+<body>
+    <h1 style="text-align: center; padding: 20px;">Background Preservation Test</h1>
+
+    <div id="test-container"></div>
+
+    <script>
+        // Critical selectors that must be preserved
+        const criticalSelectors = [
+            // Backgrounds
+            '.tradition-overlay',
+            '.hero-section',
+            '.discover-3',
+            '.discover-7',
+            '.discover-3 .tradition-overlay',
+            '.discover-7 .tradition-overlay',
+
+            // Layout containers
+            '.container',
+            '.main-content',
+            'header',
+            'footer',
+            'nav',
+
+            // Functional elements
+            '.breadcrumb-navigation',
+            '.language-toggle',
+            '.review-cards-container',
+            '.pronunciation-button',
+
+            // Visual elements
+            '.hero-image',
+            '.country-flag',
+            '.tradition-image'
+        ];
+
+        const testContainer = document.getElementById('test-container');
+
+        // Function to check if element exists and has background
+        function checkElement(selector) {
+            const element = document.querySelector(selector);
+            if (!element) return { exists: false };
+
+            const styles = window.getComputedStyle(element);
+            const hasBackground =
+                styles.backgroundColor !== 'rgba(0, 0, 0, 0)' &&
+                styles.backgroundColor !== 'transparent' ||
+                styles.backgroundImage !== 'none';
+
+            const hasSize =
+                element.offsetWidth > 0 &&
+                element.offsetHeight > 0;
+
+            return {
+                exists: true,
+                hasBackground: hasBackground,
+                hasSize: hasSize,
+                backgroundColor: styles.backgroundColor,
+                backgroundImage: styles.backgroundImage,
+                width: element.offsetWidth,
+                height: element.offsetHeight
+            };
+        }
+
+        // Load the actual page in an iframe for testing
+        function runTest(pageUrl) {
+            const iframe = document.createElement('iframe');
+            iframe.style.width = '100%';
+            iframe.style.height = '600px';
+            iframe.style.border = '1px solid #ccc';
+
+            iframe.onload = function() {
+                const results = [];
+                const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+
+                criticalSelectors.forEach(selector => {
+                    const element = iframeDoc.querySelector(selector);
+                    const result = {
+                        selector: selector,
+                        exists: !!element
+                    };
+
+                    if (element) {
+                        const styles = iframe.contentWindow.getComputedStyle(element);
+                        result.hasBackground =
+                            styles.backgroundColor !== 'rgba(0, 0, 0, 0)' &&
+                            styles.backgroundColor !== 'transparent' ||
+                            styles.backgroundImage !== 'none';
+                        result.width = element.offsetWidth;
+                        result.height = element.offsetHeight;
+                    }
+
+                    results.push(result);
+                });
+
+                displayResults(results);
+            };
+
+            iframe.src = pageUrl;
+            testContainer.appendChild(iframe);
+        }
+
+        function displayResults(results) {
+            const resultDiv = document.createElement('div');
+            resultDiv.style.padding = '20px';
+
+            let html = '<h2>Test Results</h2>';
+            html += '<table style="width: 100%; border-collapse: collapse;">';
+            html += '<tr><th>Selector</th><th>Exists</th><th>Has Background</th><th>Size</th></tr>';
+
+            results.forEach(result => {
+                const rowClass = result.exists ? 'pass' : 'fail';
+                html += `<tr style="border-bottom: 1px solid #ccc;">
+                    <td style="padding: 8px;">${result.selector}</td>
+                    <td style="padding: 8px;" class="${rowClass}">${result.exists ? '✓' : '✗'}</td>
+                    <td style="padding: 8px;">${result.hasBackground ? '✓' : '-'}</td>
+                    <td style="padding: 8px;">${result.width || 0}x${result.height || 0}</td>
+                </tr>`;
+            });
+
+            html += '</table>';
+            resultDiv.innerHTML = html;
+            testContainer.appendChild(resultDiv);
+        }
+
+        // Run test on local page
+        runTest('http://localhost:8090/everafter.com/wedding-customs/american-wedding-traditions.html');
+    </script>
+</body>
+</html>
