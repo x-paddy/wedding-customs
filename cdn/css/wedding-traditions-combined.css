@@ -65,9 +65,7 @@ body {
 
 .article-wrapper {
     contain: layout style paint;
-    min-height: 100vh;
     transform: translateZ(0); /* Force hardware acceleration */
-    will-change: auto;
 }
 
 article {
@@ -356,7 +354,7 @@ a.contextual:hover {
 .audio-term:focus .pronunciation-info,
 .audio-term.show-pronunciation .pronunciation-info {
     display: inline !important;
-} */
+}
 
 /* Phonetic styling */
 .phonetic {
@@ -3612,7 +3610,6 @@ nav {
     color: #1a1a1a;
     font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-*/
 
 /* Removed - using unified .section-heading styles
 .discover-7 .section-heading {
@@ -3623,7 +3620,6 @@ nav {
     color: #fff; /* White text */
     font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-*/
 
 /* Removed - using unified .section-heading styles
 .discover-3 .section-heading u,
@@ -3632,7 +3628,6 @@ nav {
     text-decoration-thickness: 3px;
     text-underline-offset: 8px;
 }
-*/
 
 /* Italic variant for section headings */
 .section-heading-italic {
@@ -4094,13 +4089,11 @@ nav {
 .discover-3 .section-heading {
         font-size: 4em; /* Doubled responsive */
     }
-*/
 
     /* Removed - using unified .section-heading styles
 .discover-7 .section-heading {
         font-size: 3em; /* 1.5x responsive */
     }
-*/
     
     .premium-grid {
         grid-template-columns: 1fr 1fr;
@@ -4183,13 +4176,11 @@ nav {
 .discover-3 .section-heading {
         font-size: 3.2em; /* Doubled responsive */
     }
-*/
 
     /* Removed - using unified .section-heading styles
 .discover-7 .section-heading {
         font-size: 2.4em; /* 1.5x responsive */
     }
-*/
     
     .traditions-grid,
     .featured-grid {
@@ -4894,7 +4885,6 @@ nav {
   color: #1a1a1a;
   font-family: 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
-*/
 
 /* Removed - using unified .section-heading styles
 .section-heading u {
@@ -4902,7 +4892,6 @@ nav {
   text-decoration-thickness: 3px;
   text-underline-offset: 8px;
 }
-*/
 
 /* Carousel Container */
 .review-carousel {
