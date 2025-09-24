@@ -16,6 +16,26 @@
  */
 
 /* ===== START: wedding-traditions.css ===== */
+/* Critical CSS optimizations for CLS prevention */
+.wedding-image img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+.nav-logo {
+    width: 200px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.footer-logo {
+    width: 200px;
+    height: 50px;
+    object-fit: contain;
+}
+
 /* Google Fonts with display swap for better performance */
 
 /* Color Palette */
@@ -43,12 +63,20 @@ body {
     padding-top: 77px; /* Account for fixed header */
 }
 
+.article-wrapper {
+    contain: layout style paint;
+    min-height: 100vh;
+    transform: translateZ(0); /* Force hardware acceleration */
+    will-change: auto;
+}
+
 article {
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
     background-color: #ffffff;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    contain: layout style;
 }
 
 header {
@@ -1792,13 +1820,19 @@ time {
 }
 
 .footer a {
-    color: #666;
+    color: #ffffff !important;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-weight: 500;
 }
 
 .footer a:hover {
-    color: #007bff;
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.25);
+    text-decoration: underline;
 }
 
 /* Newsletter Form */
@@ -2332,14 +2366,23 @@ article > header {
 }
 
 .footer-nav a {
-    color: #666;
+    color: #ffffff !important;
     text-decoration: none;
     font-size: 0.9em;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    margin: 0 2px;
 }
 
 .footer-nav a:hover {
-    color: #8B5A8C;
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.25);
+    text-decoration: underline;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive Design */
@@ -3561,9 +3604,9 @@ nav {
 /* Section heading styles for discover sections */
 /* Removed - using unified .section-heading styles
 .discover-3 .section-heading {
-    font-size: 5em; /* Doubled from 2.5em */
+    font-size: 5em;
     font-weight: 700;
-    font-style: italic; /* Bold Italic */
+    font-style: italic;
     text-align: center;
     margin-bottom: 40px;
     color: #1a1a1a;
@@ -3582,9 +3625,9 @@ nav {
 }
 */
 
+/* Removed - using unified .section-heading styles
 .discover-3 .section-heading u,
-.discover-7 /* Removed - using unified .section-heading styles
-.section-heading u {
+.discover-7 .section-heading u {
     text-decoration-color: #007bff;
     text-decoration-thickness: 3px;
     text-underline-offset: 8px;
